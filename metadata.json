@@ -1,0 +1,6 @@
+{
+  "name": "Clinica Dental Gabriela Pereira",
+  "description": "Premium dual-language digital flagship for Clínica Dental Dra. Gabriela Pereira Coen in Chinandega, Nicaragua.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
