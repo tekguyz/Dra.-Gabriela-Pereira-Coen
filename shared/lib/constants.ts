@@ -26,7 +26,7 @@ export const DICTIONARY = {
     },
     hero: {
       tag: "CHINANDEGA, NICARAGUA • EXCELLENCE IN ORAL HEALTH",
-      headline: "Smiles Crafted with Real Care & Precision.",
+      headline: "Smiles Crafted with Real Care & Precision",
       subheadline: "Welcome to your premier dental health clinic in Chinandega. Led by specialized endodontist Dr. Gabriela Pereira Coen, we combine advanced modern care with a gentle touch to safeguard your family's smiles.",
       cta: "Book via WhatsApp",
       whatsappMessage: "https://wa.me/50588744524?text=Hello%20Dr.%20Gabriela%2C%20I%20would%20like%20to%20request%20a%20dental%20consultation%20appointment.",
@@ -104,7 +104,7 @@ export const DICTIONARY = {
     },
     hero: {
       tag: "CHINANDEGA, NICARAGUA • EXCELENCIA EN SALUD BUCAL",
-      headline: "Sonrisas Creadas con Verdadero Cuidado y Precisión.",
+      headline: "Sonrisas Creadas con Verdadero Cuidado y Precisión",
       subheadline: "Bienvenidos a tu clínica dental de confianza en Chinandega. Bajo la dirección de la Dra. Gabriela Pereira Coen, especialista en endodoncia, combinamos técnicas modernas avanzadas con un trato humano y delicado para cuidar el bienestar de toda tu familia.",
       cta: "Agendá por WhatsApp",
       whatsappMessage: "https://wa.me/50588744524?text=Hola%20Dra.%20Gabriela%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cita%20para%20una%20consulta%20dental.",
