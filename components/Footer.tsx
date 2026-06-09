@@ -115,21 +115,6 @@ export function Footer({ lang }: { lang: LanguageType }) {
             <ul className="space-y-3 font-sans text-sm" id="footer-links-list">
               <li>
                 <a 
-                  href={CLINIC_DATA.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between py-2 border-b border-white/5 text-white/80 hover:text-white transition-colors"
-                  id="footer-link-gmaps"
-                >
-                  <div className="flex items-center gap-2">
-                    <MapPin size={16} className="text-[#00A8E8]" />
-                    <span>{dict.footer.map}</span>
-                  </div>
-                  <ArrowUpRight size={14} className="opacity-40 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </li>
-              <li>
-                <a 
                   href={CLINIC_DATA.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"

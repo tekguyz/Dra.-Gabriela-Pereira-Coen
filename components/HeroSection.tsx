@@ -6,27 +6,27 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
   const dict = DICTIONARY[lang];
 
   return (
-    <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-[#F8F9FA] via-white to-white py-16 sm:py-24 lg:py-32">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-[#F8F9FA] via-white to-white py-10 sm:py-20 lg:py-32">
       {/* Decorative Blur Orbs */}
       <div className="absolute top-[20%] left-[-10%] -z-10 h-[350px] w-[350px] rounded-full bg-[#00A8E8]/10 blur-3xl" />
       <div className="absolute right-[-10%] top-[10%] -z-10 h-[400px] w-[400px] rounded-full bg-[#FAB012]/5 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-16">
           
           {/* Text/CTA Column */}
-          <div className="flex flex-col space-y-6 lg:col-span-7">
+          <div className="flex flex-col space-y-5 sm:space-y-6 lg:col-span-7">
             
             {/* Tagline Badge */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 border border-[#FAB012]/30 shadow-sm"
+              className="inline-flex w-fit items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 sm:px-5 sm:py-2.5 border border-[#FAB012]/30 shadow-sm"
               id="hero-tag-badge"
             >
-              <Sparkles size={16} className="text-[#FAB012]" />
-              <span className="font-display text-xs font-bold uppercase tracking-wider text-brand-navy">
+              <Sparkles size={13} className="text-[#FAB012] shrink-0" />
+              <span className="font-display text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-navy">
                 {dict.hero.tag}
               </span>
             </motion.div>
@@ -36,7 +36,7 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display text-5xl font-black tracking-tight text-brand-navy sm:text-6xl lg:text-[4.5rem] lg:leading-[1.05]"
+              className="font-display text-3xl sm:text-5xl lg:text-[4.25rem] xl:text-[4.5rem] font-black tracking-tight text-brand-navy leading-[1.15] sm:leading-[1.05]"
               id="hero-headline"
             >
               {dict.hero.headline}
@@ -47,7 +47,7 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-sans text-lg leading-relaxed text-brand-navy/80 sm:text-xl max-w-2xl"
+              className="font-sans text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-brand-navy/80 max-w-2xl"
               id="hero-subheadline"
             >
               {dict.hero.subheadline}
@@ -58,18 +58,18 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col gap-6 sm:flex-row sm:items-center pt-2"
+              className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 pt-2"
               id="hero-cta-group"
             >
               <a
                 href={dict.hero.whatsappMessage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[48px] items-center justify-center gap-3 rounded-full bg-brand-navy px-8 py-4 font-display text-sm uppercase tracking-wider font-bold text-white shadow-xl hover:bg-[#00A8E8] hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+                className="flex min-h-[48px] items-center justify-center gap-2.5 rounded-full bg-brand-navy px-5 py-3 sm:px-8 sm:py-4 font-display text-xs sm:text-sm uppercase tracking-wider font-bold text-white shadow-xl hover:bg-[#00A8E8] hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] whitespace-nowrap flex-nowrap shrink-0"
                 id="hero-whatsapp-link"
               >
-                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
-                  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white" xmlns="http://www.w3.org/2000/svg"><path d="M12.004 2c-5.517 0-9.996 4.48-9.996 10c0 1.77.462 3.434 1.273 4.887L2.004 22l5.277-1.385A9.953 9.953 0 0 0 12.004 22c5.517 0 9.996-4.48 9.996-10c0-5.52-4.479-10-9.996-10zm0 1.778c4.542 0 8.222 3.68 8.222 8.222c0 4.542-3.68 8.222-8.222 8.222c-1.637 0-3.155-.479-4.435-1.302l-.319-.208l-3.13.821l.835-3.045l-.229-.364A8.17 8.17 0 0 1 3.782 12c0-4.542 3.68-8.222 8.222-8.222z"/><path d="M15.935 13.438c-.283-.142-1.674-.827-1.933-.922c-.26-.095-.448-.142-.637.142c-.188.283-.73.922-.896 1.11c-.165.188-.33.212-.613.07a7.79 7.79 0 0 1-2.28-1.407a8.59 8.59 0 0 1-1.577-1.964c-.165-.283-.018-.435.124-.576c.128-.127.283-.33.425-.495c.142-.165.189-.283.283-.472c.094-.189.047-.354-.023-.495c-.071-.142-.637-1.533-.873-2.1c-.23-.557-.462-.482-.637-.49c-.165-.008-.354-.01-.543-.01c-.189 0-.495.07-.755.354c-.26.283-.99 0.967-.99 2.36c0 1.391 1.014 2.736 1.155 2.924c.142.189 1.996 3.048 4.837 4.27c.676.29 1.203.464 1.614.595c.68.216 1.298.185 1.787.113c.545-.08 1.674-.684 1.91-1.344c.236-.66.236-1.226.165-1.344c-.07-.118-.26-.189-.543-.33z"/></svg>
+                <div className="flex h-5 w-5 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-white/10 shrink-0">
+                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-white" xmlns="http://www.w3.org/2000/svg"><path d="M12.004 2c-5.517 0-9.996 4.48-9.996 10c0 1.77.462 3.434 1.273 4.887L2.004 22l5.277-1.385A9.953 9.953 0 0 0 12.004 22c5.517 0 9.996-4.48 9.996-10c0-5.52-4.479-10-9.996-10zm0 1.778c4.542 0 8.222 3.68 8.222 8.222c0 4.542-3.68 8.222-8.222 8.222c-1.637 0-3.155-.479-4.435-1.302l-.319-.208l-3.13.821l.835-3.045l-.229-.364A8.17 8.17 0 0 1 3.782 12c0-4.542 3.68-8.222 8.222-8.222z"/><path d="M15.935 13.438c-.283-.142-1.674-.827-1.933-.922c-.26-.095-.448-.142-.637.142c-.188.283-.73.922-.896 1.11c-.165.188-.33.212-.613.07a7.79 7.79 0 0 1-2.28-1.407a8.59 8.59 0 0 1-1.577-1.964c-.165-.283-.018-.435.124-.576c.128-.127.283-.33.425-.495c.142-.165.189-.283.283-.472c.094-.189.047-.354-.023-.495c-.071-.142-.637-1.533-.873-2.1c-.23-.557-.462-.482-.637-.49c-.165-.008-.354-.01-.543-.01c-.189 0-.495.07-.755.354c-.26.283-.99 0.967-.99 2.36c0 1.391 1.014 2.736 1.155 2.924c.142.189 1.996 3.048 4.837 4.27c.676.29 1.203.464 1.614.595c.68.216 1.298.185 1.787.113c.545-.08 1.674-.684 1.91-1.344c.236-.66.236-1.226.165-1.344c-.07-.118-.26-.189-.543-.33z"/></svg>
                 </div>
                 <span>{dict.hero.cta}</span>
               </a>
@@ -81,7 +81,7 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
                 </span>
                 <a
                   href={`tel:${CLINIC_DATA.phoneMobile.replace(/\s+/g, "")}`}
-                  className="font-display text-lg font-black text-brand-navy hover:text-[#00A8E8] transition-colors"
+                  className="font-display text-base sm:text-lg font-black text-brand-navy hover:text-[#00A8E8] transition-colors"
                 >
                   {CLINIC_DATA.phoneDisplayMobile}
                 </a>
@@ -170,7 +170,9 @@ export function HeroSection({ lang }: { lang: LanguageType }) {
                           <span key={i} className="drop-shadow-sm">{star}</span>
                         ))}
                       </div>
-                      <span className="font-display text-sm font-bold text-brand-navy">Google Maps</span>
+                      <span className="font-display text-sm font-bold text-[#00A8E8] uppercase tracking-wide">
+                        {lang === "en" ? "Certified Specialist" : "Dentista Certificada"}
+                      </span>
                    </div>
                 </div>
               </div>

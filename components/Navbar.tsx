@@ -69,7 +69,7 @@ export function Navbar({ lang, setLang }: { lang: LanguageType; setLang: (l: Lan
               href={dict.hero.whatsappMessage}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-full bg-brand-navy px-6 min-h-[48px] font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#00A8E8] shadow-sm"
+              className="flex items-center justify-center gap-2 rounded-full bg-brand-navy px-6 min-h-[48px] font-display text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-[#00A8E8] shadow-sm whitespace-nowrap flex-nowrap shrink-0"
               id="book-appointment-btn"
             >
               <MessageSquare size={16} />
@@ -79,16 +79,6 @@ export function Navbar({ lang, setLang }: { lang: LanguageType; setLang: (l: Lan
 
           {/* Mobile controls */}
           <div className="flex items-center gap-2 md:hidden" id="mobile-controls-container">
-            {/* Quick Lang toggle */}
-            <button
-              onClick={() => setLang(lang === "es" ? "en" : "es")}
-              className="flex items-center justify-center gap-1 rounded-full border border-[#FAB012]/20 min-w-[48px] min-h-[48px] bg-white px-3 text-xs font-display font-bold uppercase tracking-wider text-brand-navy"
-              id="mobile-quick-lang"
-            >
-              <Globe size={14} />
-              <span>{lang === "es" ? "EN" : "ES"}</span>
-            </button>
-
             {/* Hamburger Menu Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}

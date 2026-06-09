@@ -23,16 +23,19 @@ export function ContactForm({ lang }: { lang: LanguageType }) {
 
     setLoading(true);
 
-    // Prepare Netlify post
-    const postBody = new URLSearchParams({
-      "form-name": "dental_intake",
-      ...formData,
-    }).toString();
+    // Prepare Netlify post payload using FormData as specified
+    const payload = new FormData();
+    payload.append("form-name", "dental_intake");
+    payload.append("name", formData.name);
+    payload.append("phone", formData.phone);
+    payload.append("description", formData.description);
 
-    fetch("/", {
+    fetch("/forms.html", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: postBody,
+      headers: { 
+        "X-Requested-With": "XMLHttpRequest"
+      },
+      body: payload,
     })
       .then(() => {
         setLoading(false);
@@ -100,6 +103,7 @@ export function ContactForm({ lang }: { lang: LanguageType }) {
               <form
                 name="dental_intake"
                 method="POST"
+                action="/forms.html"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
